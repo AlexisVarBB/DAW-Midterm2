@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://e0.pxfuel.com/wallpapers/1008/792/desktop-wallpaper-classic-star-wars-luke-on-tatooine.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Header Styles */
+header {
+  background-image: url('https://wallpaperaccess.com/full/1200171.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+header h1, header h3 {
+  color: #ffe81f;
+  z-index: 2;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 70px;
+  text-shadow: 4px 4px 8px #000000;
+}
+
+h3 {
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
+  color: #e0e0e0;
+}
+
+h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 48px;
+  color: #FFD700;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+}
+
+/* Search Input Styles */
+#searchInput {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+}
+
+#searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(255, 232, 31, 0.7);
+}
+
+#searchButton {
+  background-color: #ffe81f;
+  color: #000;
+  border: none;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+#characterCard {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(33, 37, 41, .5) 100%);
+  color: #fff;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+#characterImage {
+  width: 50%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+#characterName {
+  font-family: 'Star Jedi', sans-serif;
+  font-size: 1.8rem;
+  color: #ffe81f;
+}
+
+.card-text {
+  margin: 10px 0;
+}
+
+/* Navigation Buttons */
+#prevButton, #nextButton {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffe81f;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prevButton {
+  left: 15px;
+}
+
+#nextButton {
+  right: 15px;
+}
+
+#prevButton:hover, #nextButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffd700;
+}
+
+/* Error Section */
+#errorSection {
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #prevButton, #nextButton {
+    font-size: 18px;
+    width: 100%;
+    margin: 10px 0;
+  }
+}

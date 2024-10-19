@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars Character Encyclopedia</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="py-4 bg-dark text-light d-flex justify-content-center align-items-center position-relative">
+    <div class="text-center">
+      <h1>The Galaxy</h1>
+      <h3>Star Wars Character Encyclopedia</h3>
+    </div>
+  </header>
+
+  <div class="container my-5 clearfix">
+    <div id="characterCard" class="card">
+      <img id="characterImage" class="card-img-top" src="default-image.jpg" alt="Character Image">
+      <div class="card-body">
+        <h2 id="characterName" class="card-title">Luke Skywalker</h2>
+        <p id="characterID" class="card-text">ID: 1</p>
+        <p id="characterSpecies" class="card-text">Species: Human</p>
+        <p id="characterGender" class="card-text">Gender: Male</p>
+        <p id="characterHeight" class="card-text">Height: 172 cm</p>
+        <p id="characterMass" class="card-text">Mass: 77 kg</p>
+        <p id="characterHomeworld" class="card-text">Homeworld: Tatooine</p>
+        <p id="characterAffiliations" class="card-text">Affiliations: Jedi, Rebel Alliance</p>
+        <p id="characterMasters" class="card-text">Master(s): Obi-Wan Kenobi</p>
+        <p id="characterApprentices" class="card-text">Apprentice(s): None</p>
+        <a id="wikiLink" href="#" target="_blank" class="btn btn-secondary">Read More</a>
+      </div>
+    </div>
+
+    <div class="container mt-3 text-center">
+      <input type="text" id="searchInput" class="form-control mx-auto" placeholder="Search the Galaxy..." style="max-width: 400px;">
+      <button id="searchButton" class="btn btn-primary mt-2 mx-auto">Search</button>
+    </div>
+
+    <div class="text-center my-4">
+      <button id="prevButton" class="btn-primary">&#8592;</button>
+      <button id="nextButton" class="btn-primary">&#8594;</button>
+    </div>
+
+    <div id="errorSection" class="alert alert-danger text-center" style="display: none;">
+      <p>Character not found. <a href="#" id="resetLink">Go back to the list.</a></p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

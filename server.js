@@ -1,14 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path'); // Import path module
+const path = require('path'); 
 
 const app = express();
 
-// Middleware
-app.use(cors()); // Enable CORS
-app.use(express.static(path.join(__dirname))); // Serve static files from root directory
+app.use(cors()); 
+app.use(express.static(path.join(__dirname))); 
 
-// Route to serve the index.html on default route
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
